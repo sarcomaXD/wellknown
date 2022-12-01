@@ -1,0 +1,30 @@
+---
+title: "airplane_crashed_beck_R"
+output: html_document
+date: "2022-11-26"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# load data
+
+```{r}
+df    <- read.csv('data/Airplane_Crashes_and_Fatalities_Since_1908.csv')
+city  <- read.csv('data/worldcities.csv')
+world <- read.csv('data/number-of-air-transport-passengers.csv')
+```
+
+# pre-processing
+
+```{r}
+subset(df, Ground >= 500)
+```
+
+```{r}
+
+```
+
