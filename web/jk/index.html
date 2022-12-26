@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="num10">
+      <h2>문제 10 : 별 찍기</h2>
+      <input type="text" class="num10" />
+      <button class="num10">확인</button>
+      <p class="num10"></p>
+    </div>
+    <div class="num11">
+      <h2>문제 11 : 1~100 까지 더하기</h2>
+      <p class="num11"></p>
+    </div>
+    <div class="num12">
+      <h2>문제 12 : 게임 캐릭터 클래스 만들기</h2>
+      <input type="text" class="num12_health" value="545" />
+      <input type="text" class="num12_mana" value="210" />
+      <input type="text" class="num12_armor" value="10" />
+      <button class="num12">확인</button>
+      <p class="num12"></p>
+    </div>
+    <div class="num13">
+      <h2>문제 13 : 몇번째 행성 인가요?</h2>
+      <input type="text" class="num13" />
+      <button class="num13">확인</button>
+      <p class="num13"></p>
+    </div>
+    <div class="num14">
+      <h2>문제 14 : 3의 배수 인가요?</h2>
+      <input type="text" class="num14" />
+      <button class="num14">확인</button>
+      <p class="num14"></p>
+    </div>
+    <div class="num15">
+      <h2>문제 15 : 자기소개</h2>
+      <input type="text" class="num15" />
+      <button class="num15">확인</button>
+      <p class="num15"></p>
+    </div>
+    <div class="num16">
+      <h2>문제 16 : 로꾸거</h2>
+      <input type="text" class="num16" />
+      <button class="num16">확인</button>
+      <p class="num16"></p>
+    </div>
+    <div class="num17">
+      <h2>문제 17 : 놀이기구 키제한</h2>
+      <input type="text" class="num17" />
+      <button class="num17">확인</button>
+      <p class="num17"></p>
+    </div>
+    <div class="num18">
+      <h2>문제 18 : 평균 점수</h2>
+      <input type="text" class="num18" />
+      <input type="text" class="num18" />
+      <input type="text" class="num18" />
+      <button class="num18">확인</button>
+      <p class="num18"></p>
+    </div>
+    <div class="num19">
+      <h2>문제 19 : 제곱을 구하자</h2>
+      <p>공백으로 구분하여 두 숫자 a와b가 주어지면, a의b승을 구하세요</p>
+      <input type="text" class="num19" />
+      <button class="num19">확인</button>
+      <p class="num19"></p>
+    </div>
+    <div class="num20">
+      <h2>문제 20 : 몫과 나머지를 구하자</h2>
+      <p>
+        공백으로 구분하여 두 숫자 a와b가 주어지면, a를b로 나눈 몫과 나머지를
+        구하세요
+      </p>
+      <input type="text" class="num20" />
+      <button class="num20">확인</button>
+      <p class="num20"></p>
+    </div>
+    <div class="num24">
+      <h2>문제 24 : 대문자로 바꿔주세요</h2>
+      <p>이름이 입력되면 대문자로 출력</p>
+      <input type="text" class="num24" />
+      <button class="num24">확인</button>
+      <p class="num24"></p>
+    </div>
+    <div class="num25">
+      <h2>문제 25 : 원의 넓이를 구하세요</h2>
+      <span>반지름</span>
+      <input type="text" class="num25" />
+      <button class="num25">확인</button>
+      <p class="num25"></p>
+    </div>
+    <div class="num26">
+      <h2>문제 26 : 행성문제 2</h2>
+      <p>행성이름을 한글로 입력하면 영어로 반환</p>
+      <input type="text" class="num26" />
+      <button class="num26">확인</button>
+      <p class="num26"></p>
+    </div>
+    <div class="num27">
+      <h2>문제 27 : 객체 만들기</h2>
+      <div>
+        <label>
+          학생이름 공백으로 입력
+          <input type="text" class="num27_name" />
+        </label>
+      </div>
+      <div>
+        <label>
+          학생점수 공백으로 입력
+          <input type="text" class="num27_score" />
+        </label>
+        <button class="num27">확인</button>
+      </div>
+      <p class="num27"></p>
+    </div>
+    <script>
+      document.querySelector("button.num10").addEventListener("click", () => {
+        let input = document.querySelector("input.num10").value;
+        let num10_p = "";
+        console.log(num10_p);
+        for (i = 1; i <= input; i++) {
+          a = "*";
+          b = "&nbsp";
+          num10_p += b.repeat(input - i) + a.repeat(2 * i - 1) + "<br>";
+        }
+        //console.log(num10_p);
+        document.querySelector("p.num10").innerHTML = num10_p;
+      });
+      let s = 0;
+      for (i = 0; i <= 100; i++) {
+        s += i;
+      }
+      document.querySelector("p.num11").innerHTML = s;
+
+      class Wizard {
+        constructor(health, mana, armor) {
+          this.health = health;
+          this.mana = mana;
+          this.armor = armor;
+        }
+        attack() {
+          return "파이어볼";
+        }
+      }
+      document.querySelector("button.num12").addEventListener("click", () => {
+        health = document.querySelector("input.num12_health").value;
+        mana = document.querySelector("input.num12_mana").value;
+        armor = document.querySelector("input.num12_armor").value;
+        //console.log(health, mana, armor);
+        const x = new Wizard(health, mana, armor);
+        document.querySelector("p.num12").innerHTML =
+          x.health + ", " + x.mana + ", " + x.armor + "<br>" + x.attack();
+      });
+      document.querySelector("button.num13").addEventListener("click", () => {
+        const solar_system = [
+          "수성",
+          "금성",
+          "지구",
+          "화성",
+          "목성",
+          "토성",
+          "천왕성",
+          "해왕성",
+        ];
+        let n_th = document.querySelector("input.num13").value;
+        document.querySelector("p.num13").innerHTML = solar_system[n_th - 1];
+      });
+
+      document.querySelector("button.num14").addEventListener("click", () => {
+        let n = document.querySelector("input.num14").value;
+        let answer = "";
+        if (n % 3 == 0) {
+          answer = "짝";
+        } else {
+          answer = n;
+        }
+        document.querySelector("p.num14").innerHTML = answer;
+      });
+      document.querySelector("button.num15").addEventListener("click", () => {
+        let name = document.querySelector("input.num15").value;
+        document.querySelector("p.num15").innerHTML =
+          "안녕하새요. 저는 " + name + "입니다.";
+      });
+      document.querySelector("button.num16").addEventListener("click", () => {
+        let input_num16 = document.querySelector("input.num16").value;
+        let result = "";
+        for (i = 1; i <= input_num16.length; i++) {
+          result += input_num16.substr(-i, 1);
+        }
+        document.querySelector("p.num16").innerHTML = result;
+      });
+      document.querySelector("button.num17").addEventListener("click", () => {
+        let height_lim = 150;
+        if (height_lim <= document.querySelector("input.num17").value) {
+          document.querySelector("p.num17").innerHTML = "YES";
+        } else {
+          document.querySelector("p.num17").innerHTML = "NO";
+        }
+      });
+      document.querySelector("button.num18").addEventListener("click", () => {
+        let average = 0;
+        document.querySelectorAll("input.num18").forEach((score) => {
+          average += Number(score.value);
+        });
+        document.querySelector("p.num18").innerHTML = average / 3;
+      });
+      document.querySelector("button.num19").addEventListener("click", () => {
+        let num_19 = document.querySelector("input.num19").value;
+        num_19_split = num_19.split(" ");
+        result_19 = Number(num_19_split[0]) ** Number(num_19_split[1]);
+        document.querySelector("p.num19").innerHTML = result_19;
+      });
+      document.querySelector("button.num20").addEventListener("click", () => {
+        let num_20 = document.querySelector("input.num20").value;
+        num_20_split = num_20.split(" ");
+        quotient = Math.floor(
+          Number(num_20_split[0]) / Number(num_20_split[1])
+        );
+        remainder = Number(num_20_split[0]) % Number(num_20_split[1]);
+        document.querySelector("p.num20").innerHTML =
+          "몫 : " + quotient + "<br>나머지 : " + remainder;
+      });
+      document.querySelector("button.num24").addEventListener("click", () => {
+        let num24_name = document.querySelector("input.num24").value;
+        document.querySelector("p.num24").innerHTML = num24_name.toUpperCase();
+      });
+      document.querySelector("button.num25").addEventListener("click", () => {
+        let radius = document.querySelector("input.num25").value;
+        let circle_area = radius * radius * 3.14;
+        document.querySelector("p.num25").innerHTML = circle_area;
+      });
+      document.querySelector("button.num26").addEventListener("click", () => {
+        const solar_system_kor = [
+          "수성",
+          "금성",
+          "지구",
+          "화성",
+          "목성",
+          "토성",
+          "천왕성",
+          "해왕성",
+        ];
+        const solar_system_en = [
+          "Mercury",
+          "Venus",
+          "Earth",
+          "Mars",
+          "Jupiter",
+          "Saturn",
+          "Uranus",
+          "Neptune",
+        ];
+        let kor_to_en;
+        let val = document.querySelector("input.num26").value;
+        for (i = 0; i < solar_system_kor.length; i++) {
+          if (solar_system_kor[i] == val) {
+            kor_to_en = solar_system_en[i];
+          }
+        }
+        document.querySelector("p.num26").innerHTML = kor_to_en;
+      });
+      document.querySelector("button.num27").addEventListener("click", () => {
+        let num_27_name = document.querySelector("input.num27_name").value;
+        let num_27_name_split = num_27_name.split(" ");
+        let num_27_score = document.querySelector("input.num27_score").value;
+        let num_27_score_split = num_27_score.split(" ");
+        let dict_num27 = {};
+        let answer_num_27 = "{";
+        //console.log(num_27_name_split, num_27_score_split);
+        if (num_27_name_split.length == num_27_score_split.length) {
+          for (i = 0; i < num_27_name_split.length; i++) {
+            dict_num27[num_27_name_split[i]] = num_27_score_split[i];
+          }
+        }
+        for (j = 0; j < Object.entries(dict_num27).length; j++) {
+          answer_num_27 +=
+            Object.entries(dict_num27)[j][0] +
+            ":" +
+            Object.entries(dict_num27)[j][1] +
+            ", ";
+        }
+        answer_num_27 += "}";
+        document.querySelector("p.num27").innerHTML = answer_num_27;
+      });
+    </script>
+  </body>
+</html>
