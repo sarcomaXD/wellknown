@@ -1,2 +1,2 @@
-'wellknown' kaggle and dacon study group for data science
+kaggle and dacon study group for data science
 
